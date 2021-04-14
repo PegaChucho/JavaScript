@@ -1,0 +1,17 @@
+let mes = 1;
+let estacion;
+
+if (mes == 1 || mes == 2 || mes == 12) {
+  estacion = "Invierno";
+} else if (mes == 3 || mes == 4 || mes == 5) {
+  estacion = "Primavera";
+} else if (mes == 6 || mes == 6 || mes == 8) {
+  estacion = "Verano";
+} else if (mes == 9 || mes == 10 || mes == 11) {
+  estacion = "Otoño";
+} else {
+  console.log("Mes no válido");
+  estacion==null;
+}
+
+console.log(estacion);

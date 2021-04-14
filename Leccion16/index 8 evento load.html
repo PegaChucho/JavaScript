@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body onload="entrar()">
+
+    <h1 id="titulo">Manejo DOM con JS y metodo write()</h1>
+    <button>Mostrar</button>
+    <br>
+    <div id="mostrar"></div>
+    <script>
+
+        function entrar () {
+            alert("Entrando a la página web");
+            let texto="";
+            if (navigator.cookieEnabled){
+                texto="Cookies habilitadas"
+            } else{
+                texto="Cookies deshabilitadas"
+            }
+            document.getElementById("mostrar").innerHTML=texto;
+        }
+    </script>
+</body>
+
+</html>  

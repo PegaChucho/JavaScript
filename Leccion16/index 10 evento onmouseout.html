@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body >
+
+    <h1 id="titulo" onmouseover="rojo(this)" onmouseout="original(this)">Manejo DOM con JS y metodo write()</h1>
+    <h2 onmousedown="rojo(this)" onmouseup="original(this)">Subtitulo para cambiar de color al hacer click</h2>
+    <br/>
+
+
+    <script>
+       let rojo = function(content){
+           content.style.color="red"
+       } 
+
+       let original = function(content){
+           content.style.color="black"
+       } 
+
+    </script>
+</body>
+
+</html>  

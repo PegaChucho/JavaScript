@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        .azul {
+            color: blue;
+        }
+
+        .verde {
+            color: green;
+        }
+
+        .rojo {
+            color: red;
+        }
+    </style>
+    <title>Document</title>
+</head>
+
+<body>
+    <div>
+        <h1 class="rojo" id="cabecero">Ejemplo DOM con JS</h1>
+        <p class="azul" id="parrafo">Saludos :)</p>
+        <p class="azul" id="parrafo2">Saludos de nuevo</p>
+    </div>
+
+    <hr>
+
+    <div>
+        <h1 class="rojo" id="cabecero">Nuevo título</h1>
+        <p class="verde" id="parrafo">Saludos :)</p>
+        <p class="verde" id="parrafo2">Saludos de nuevo</p>
+    </div>
+
+    <script>
+        let cabecero = document.getElementById("cabecero");
+        let parrafo = document.getElementById("parrafo");
+        // console.log(`Valor del cabecero: ${cabecero.innerHTML}`);
+        // console.log(`Valor párrafo: ${parrafo.innerHTML}`);
+
+        // cabecero.innerHTML="Nuevo título";
+        // parrafo.innerHTML="Nuevo valor del párrafo";
+
+        let parrafos = document.getElementsByTagName("p");
+        console.log(`Número de párrafos: ${parrafos.length}`)
+        for (let parrafo of parrafos) {
+            console.log(parrafo.innerHTML)
+        }
+
+        let elementosAzules = document.getElementsByClassName("azul")
+        console.log(`Numero de elementos: ${elementosAzules.length}`)
+        for (let i = 0; i < elementosAzules.length; i++) {
+            console.log(`ID: ${i}: ${elementosAzules[i].innerHTML}`);
+        }
+
+        let elementosQuerySelector = document.querySelectorAll("h1.rojo") //mas específico
+        console.log(`Número de títulos rojos: ${elementosQuerySelector.length}`)
+        for (let elemento of elementosQuerySelector) {
+            console.log(elemento.innerHTML)
+        }
+    </script>
+</body>
+
+</html>

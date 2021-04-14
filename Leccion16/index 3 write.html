@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <h1 id="titulo">Manejo DOM con JS y metodo write()</h1>
+    <button onclick="mostrar()">Mostrar</button>
+    <br>
+    <script>
+        document.write("Saludos desde JS");//Esto sobreescribe cualquier información
+        
+        let mostrar =()=> {
+            //document.write("Adiós");
+            document.getElementById("titulo").innerHTML+="<br>Nuevo título";
+        }
+        
+    </script>
+</body>
+</html> 
